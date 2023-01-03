@@ -1,0 +1,110 @@
+@import '../../scss/variables';
+
+.slick-slide > div {
+	margin: 0 10px;
+}
+.slick-dots li button {
+	display: none;
+}
+
+button {
+}
+
+.slick-list {
+	margin: 0 -10px;
+}
+.cardGroup {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 30px;
+	> h2 {
+		font-weight: 500;
+	}
+	.masters {
+		width: 80%;
+		.card {
+			border-radius: 15px;
+			-webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+			-moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+			box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+			width: 400px;
+			height: auto;
+			padding: 20px;
+			transition: transform 0.3s ease;
+			min-height: 670px;
+			> img {
+				border-radius: 50%;
+			}
+			> h2 {
+				font-size: 24px;
+				text-align: center;
+				margin: 8px;
+				font-weight: bold;
+			}
+			> span {
+				font-size: 14px;
+				font-weight: bold;
+			}
+
+			p {
+				font-size: 16px;
+			}
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.cardGroup {
+		text-align: center;
+		.card {
+			> img {
+				width: 80%;
+				height: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.cardGroup {
+		padding: 10px 10px 50px 10px;
+		.card {
+			padding: 0px;
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.cardGroup {
+		.masters {
+			.card {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 376px) {
+	.cardGroup {
+		.card {
+			width: 80%;
+			height: auto;
+			> img {
+				width: 100%;
+				height: auto;
+			}
+			> h2 {
+				font-size: 18px;
+			}
+			> p {
+				font-size: 16px;
+			}
+		}
+	}
+}

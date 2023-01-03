@@ -1,0 +1,142 @@
+@import '../../scss/variables';
+
+footer {
+	background-color: $black;
+	padding: 50px;
+	.container {
+		max-width: 1440px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.footer__info {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			> p {
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				> a {
+					font-weight: 300;
+					font-size: 16px;
+					text-decoration: none;
+					color: $white;
+				}
+			}
+		}
+		.footer__nav {
+			> nav {
+				> ul {
+					flex-direction: column;
+					margin: 0;
+					gap: 18px;
+					justify-content: start;
+					align-items: flex-start;
+					list-style-type: none;
+					> li {
+						> a {
+							cursor: pointer;
+							font-weight: 300;
+							color: $white;
+							font-size: 16px;
+							text-decoration: none;
+							transition: all 0.3s ease;
+							&:hover {
+								color: $pink;
+							}
+						}
+					}
+				}
+			}
+		}
+		.footer__title {
+			max-width: 260px;
+			> h5 {
+				font-weight: 300;
+				font-size: 14px;
+				color: $white;
+			}
+		}
+		.footer__politics {
+			> h5 {
+				font-weight: 300;
+				color: $white;
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	footer {
+		padding: 30px;
+		.container {
+			.footer__info {
+				> p {
+					> a {
+						font-size: 14px;
+					}
+				}
+			}
+			.footer__nav {
+				li {
+					font-size: 12px;
+				}
+			}
+			.footer__title {
+				> h5 {
+					font-size: 14px;
+				}
+			}
+			.footer__politics {
+				> h5 {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	footer {
+		.container {
+			max-width: 570px;
+			.footer__info {
+				margin-bottom: 76px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	footer {
+		.container {
+			.footer__nav,
+			.footer__info {
+				text-align: center;
+			}
+			.footer__title {
+				margin: 0 auto;
+				text-align: center;
+				margin-bottom: 30px;
+			}
+			.footer__politics {
+				margin: 0 auto;
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 321px) {
+	footer {
+		> .container {
+			justify-content: center;
+			gap: 15px;
+			> .footer__info {
+				max-height: max-content;
+			}
+		}
+	}
+}

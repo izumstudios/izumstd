@@ -1,0 +1,94 @@
+@import '../../scss/variables';
+
+.header__menu {
+	background-color: #ffffff;
+	padding-bottom: 10px;
+	&_item {
+		> ul {
+			display: flex;
+			list-style-type: none;
+			gap: 150px;
+			align-items: center;
+			justify-content: center;
+			> li {
+				font-size: 20px;
+				font-weight: 500;
+				> a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 10px;
+					text-decoration: none;
+					&:hover {
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.header__menu {
+		&_item {
+			> ul {
+				margin-top: 16px;
+				li {
+					font-size: 16px;
+					> a {
+						> img {
+							width: 14px;
+							height: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 900px) {
+	.header__menu {
+		&_item {
+			> ul {
+				gap: 80px;
+				margin-top: 16px;
+				li {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 588px) {
+	.header__menu {
+		&_item {
+			> ul {
+				gap: 40px;
+				margin-top: 16px;
+				li {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 516px) {
+	.header__menu {
+		display: none;
+	}
+}
+@media screen and (max-width: 588px) {
+	.header__menu {
+		&_item {
+			> ul {
+				gap: 40px;
+				margin-top: 16px;
+				li {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

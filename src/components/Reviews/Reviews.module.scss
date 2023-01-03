@@ -1,0 +1,224 @@
+@import "../../scss/variables";
+
+.container {
+	height: 100%;
+	background-color: rgba(34, 34, 34, 0.03);
+	padding: 15px;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	.reviews {
+		padding: 25px;
+		flex-wrap: wrap;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 100px;
+		z-index: 2;
+		.videoReview {
+			> h1 {
+				font-weight: 500;
+				text-align: center;
+				font-size: 36px;
+				color: $black;
+				margin-bottom: 80px;
+				> span {
+					font-weight: 600;
+					font-size: 46px;
+					color: $pink;
+					margin-right: 10px;
+				}
+			}
+			width: 650px;
+			z-index: 2;
+		}
+		.picReview {
+			display: flex;
+			justify-content: center;
+			width: 680px;
+			z-index: 2;
+			.yandex__rev {
+				width: 560px;
+				height: 800px;
+				overflow: hidden;
+				position: relative;
+				.iframe {
+					width: 100%;
+					height: 100%;
+					border: 1px solid #e6e6e6;
+					border-radius: 8px;
+					box-sizing: border-box;
+					.badge {
+						.badge__form {
+							display: none;
+						}
+					}
+				}
+				.iframe__link {
+					box-sizing: border-box;
+					text-decoration: none;
+					color: #b3b3b3;
+					font-size: 10px;
+					padding: 0 20px;
+					position: absolute;
+					bottom: 8px;
+					width: 100%;
+					text-align: center;
+					left: 0;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: block;
+					max-height: 14px;
+					white-space: nowrap;
+					padding: 0 16px;
+					box-sizing: border-box;
+				}
+			}
+			> .carusel {
+				.images {
+					color: $black;
+					.star_date {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 15px;
+						> .stars {
+							display: inline-flex;
+							gap: 4px;
+						}
+						> span {
+							font-size: 16px;
+						}
+					}
+					> h2 {
+						margin-bottom: 30px;
+					}
+				}
+			}
+			> a {
+				color: $black;
+				text-decoration: none;
+				font-size: 18px;
+				&:hover {
+					color: $black;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.container {
+		.reviews {
+			.picReview {
+				.yandex__rev {
+					width: 708px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.container {
+		.reviews {
+			gap: 160px;
+			.videoReview {
+				width: 500px;
+				height: 440px;
+				display: block;
+				> h1 {
+					margin-bottom: 50px;
+					font-size: 26px;
+					> span {
+						font-size: 36px;
+					}
+				}
+			}
+			.picReview {
+				.yandex__rev {
+					width: 500px;
+				}
+			}
+		}
+		> button {
+			margin: 0 auto 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 683px) {
+	.container {
+		.reviews {
+			.videoReview {
+				width: 500px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 512px) {
+	.container {
+		.reviews {
+			.picReview {
+				.yandex__rev {
+					width: 337px;
+					height: 886px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.container {
+		padding: 0 0 510px 0;
+		.reviews {
+			gap: 320px;
+			.videoReview,
+			.picReview {
+				> h1 {
+					margin: 30px 0 30px 0;
+					font-size: 22px;
+					> span {
+						font-size: 28px;
+					}
+				}
+				width: 300px;
+				height: 300px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 321px) {
+	.container {
+		.reviews {
+			.videoReview {
+				.carusel {
+					padding: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 290px) {
+	.container {
+		.reviews {
+			.picReview {
+				.yandex__rev {
+					width: 250px;
+					height: 852px;
+				}
+				.carusel {
+					max-width: 270px;
+					.images {
+						> p {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

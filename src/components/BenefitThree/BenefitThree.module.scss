@@ -1,0 +1,82 @@
+@import '../../scss/variables';
+
+.container {
+	padding: 30px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+	flex-wrap: wrap;
+	.titles {
+		max-width: 700px;
+		> h4 {
+			font-size: 42px;
+			font-weight: 400;
+			font-family: sans-serif;
+			margin-bottom: 10px;
+			> span {
+				font-weight: 500;
+				color: $pink;
+			}
+		}
+		> p {
+			font-weight: 400;
+
+			font-size: 24px;
+			font-family: sans-serif;
+		}
+	}
+	.image {
+		max-width: 400px;
+		width: 80%;
+		height: 30%;
+		border-radius: 30px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.container {
+		padding: 20px 10px;
+		.titles {
+			max-width: 500px;
+			> h4 {
+				font-size: 32px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 546px) {
+	.container {
+		.titles {
+			padding: 0 20px;
+			> h4 {
+				font-size: 28px;
+			}
+			> p {
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.container {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 376px) {
+	.container {
+		.titles {
+			padding: 0 20px;
+			> h4 {
+				font-size: 22px;
+			}
+			> p {
+				font-size: 18px;
+			}
+		}
+	}
+}

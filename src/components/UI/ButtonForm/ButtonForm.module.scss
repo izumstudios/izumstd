@@ -1,0 +1,148 @@
+@import '../../../scss/variables';
+
+.third__modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: auto;
+	background-color: $white;
+	padding: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	> span {
+		> h2 {
+			margin-bottom: 20px;
+		}
+	}
+	.third__modal__button {
+		margin: 20px 0 0 0;
+	}
+}
+
+.second__modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	height: auto;
+	background-color: $white;
+	padding: 30px;
+}
+
+.primary {
+	background: radial-gradient(
+		1600.6% 83595.09% at 100% -27.56%,
+		#722b4f 0%,
+		rgba(149, 51, 101, 0.870151) 9.28%,
+		rgba(141, 44, 94, 0.85) 100%
+	);
+	box-shadow: 2px 2px 13px rgba(255, 255, 255, 0.38),
+		inset 8px 8px 27px rgba(98, 40, 69, 0.88);
+	border-radius: 11px;
+	cursor: pointer;
+	margin: 15px;
+	padding: 20px;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-weight: 500;
+	background-color: $pink;
+	color: $white;
+	border: 1px solid $pink;
+	transition: all 0.3s ease-in-out;
+	&:hover {
+		background: radial-gradient(
+			1600.6% 83595.09% at 100% -27.56%,
+			$white 0%,
+			rgba(255, 245, 245, 0.87) 9.28%,
+			rgba(255, 245, 245, 0.87) 100%
+		);
+		box-shadow: 2px 2px 13px rgba(255, 255, 255, 0.38),
+			inset 8px 8px 27px rgba(255, 245, 245, 0.87);
+		color: $pink;
+	}
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	> label {
+		margin-bottom: 10px;
+	}
+	.form__action {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 90%;
+		> button[type='submit'] {
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.label {
+		font-size: 24px;
+	}
+	.third__modal {
+		> h2 {
+			font-size: 22px;
+			font-weight: 600;
+		}
+		> h3 {
+			font-weight: 500;
+		}
+		> a {
+			> button {
+				padding: 15px;
+			}
+		}
+	}
+	.second__modal {
+		padding: 15px;
+		width: 94%;
+		.label {
+			max-width: 230px;
+			margin-bottom: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 376px) {
+	.second__modal {
+		padding: 15px;
+		width: 94%;
+	}
+	.form {
+		.form__action {
+			> input {
+				margin: 5px 0 25px;
+			}
+			> button[type='submit'] {
+				padding: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.form {
+		.form__action {
+			> input {
+				width: 250px;
+			}
+		}
+	}
+	.secondary {
+		> p {
+			max-width: 126px;
+			text-align: left;
+		}
+	}
+}

@@ -1,0 +1,226 @@
+@import '../../scss/variables';
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 30px;
+	> h1 {
+		font-size: 42px;
+		text-align: center;
+		font-weight: 500;
+		margin-bottom: 20px;
+	}
+	.information {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 120px;
+		> .leftInfo {
+			display: flex;
+			flex-direction: column;
+			> a {
+				margin-top: 50px;
+				padding: 20px;
+				font-size: 18px;
+				font-weight: 500;
+				background-color: $pink;
+				color: $white;
+				border-radius: 10px;
+				border: 1px solid $pink;
+				text-decoration: none;
+				transition: all 0.3s ease;
+				&:hover {
+					color: $pink;
+					background-color: $white;
+					border: 1px solid $pink;
+				}
+			}
+		}
+		.infoTitle {
+			display: inline-flex;
+			flex-direction: column;
+			> a {
+				font-size: 24px;
+				color: $black;
+				text-decoration: none;
+				font-weight: 500;
+				&:first-child {
+					color: $pink;
+					transition: all 0.3s ease-in-out;
+					&:hover {
+						color: $black;
+					}
+				}
+			}
+		}
+		.adress {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+			margin: 20px 0px;
+			> p {
+				display: flex;
+				align-items: center;
+				font-size: 18px;
+				> span {
+					font-weight: 700;
+				}
+				> img {
+					width: 20px;
+					height: 20px;
+					margin-left: 4px;
+				}
+			}
+		}
+		.map {
+			> a {
+				> img {
+					width: 560px;
+					height: 380px;
+				}
+			}
+		}
+		> button {
+			max-width: 270px;
+		}
+	}
+}
+
+@media screen and (max-width: 1244px) {
+	.container {
+		.information {
+			gap: 40px;
+			text-align: center;
+		}
+	}
+}
+@media screen and (max-width: 565px) {
+	.container {
+		.information {
+			.map {
+				> a {
+					> img {
+						width: 380px;
+						height: 300px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 426px) {
+	.container {
+		> h1 {
+			font-size: 34px;
+		}
+		.information {
+			.infoTitle {
+				> a {
+					font-size: 18px;
+				}
+			}
+			.adress {
+				max-width: 231px;
+				gap: 20px;
+				> p {
+					line-height: 1;
+					align-items: flex-start;
+					text-align: left;
+					flex-wrap: wrap;
+				}
+			}
+			.map {
+				> a {
+					> img {
+						width: 370px;
+						height: 270px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 376px) {
+	.container {
+		.information {
+			.leftInfo {
+				.adress {
+					> p {
+						font-size: 16px;
+					}
+				}
+				> a {
+					padding: 14px;
+					font-size: 14px;
+				}
+			}
+			.map {
+				> a {
+					> img {
+						width: 320px;
+						height: 250px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.container {
+		.information {
+			.map {
+				> a {
+					> img {
+						min-width: 250px;
+						width: 100%;
+						height: auto;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 310px) {
+	.container {
+		.information {
+			.leftInfo {
+				> a {
+					font-size: 16px;
+				}
+			}
+			.map {
+				> a {
+					> img {
+						width: 270px;
+						height: 214px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 290px) {
+	.container {
+		.information {
+			.leftInfo {
+				> a {
+					font-size: 12px;
+					padding: 12px;
+				}
+			}
+			.map {
+				> a {
+					> img {
+						width: 230px;
+						height: 208px;
+					}
+				}
+			}
+		}
+	}
+}
